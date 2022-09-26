@@ -6,11 +6,8 @@ let cardSchema = new Schema(
     status: {
       type: String,
     },
-    hours: {
-      type: String,
-    },
     amount: {
-      type: String,
+      type: Number,
     },
   },
   {
