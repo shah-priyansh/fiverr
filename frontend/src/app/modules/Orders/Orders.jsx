@@ -58,16 +58,16 @@ export const Orders = () => {
   const toggle = () => setIsToggled(!isToggled);
 
   const data = lodash.groupBy(todosState, "status");
-  const addCard = () => {
+  const addCard = async () => {
     const productData = {
       status,
       amount,
     };
 
     if (edit === true) {
-      dispatch(editCard(editData, productData));
+      await dispatch(editCard(editData, productData));
     } else {
-      dispatch(createCard(productData));
+      await dispatch(createCard(productData));
     }
 
     setOpen(false);
