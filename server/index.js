@@ -4,10 +4,11 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 4000;
 const Routes = require("./routes/routes.js");
+require("dotenv").config({});
 
 const app = express();
 
-const URL = `mongodb://localhost/fiverrdb`;
+const URL = process.env.MONGO_URL;
 
 mongoose
   .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
