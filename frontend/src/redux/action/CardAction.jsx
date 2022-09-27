@@ -1,7 +1,7 @@
 import * as type from "../types";
 import axios from "axios";
 
-const url = "http://localhost:4000";
+const url = "https://fiverr-learning.herokuapp.com";
 
 export const createCard = (noteInfo) => {
   return async (dispatch) => {
